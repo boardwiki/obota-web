@@ -1,0 +1,11 @@
+{
+  "code": 0,
+  "data": {
+    "grantType": "Bearer",
+    "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkubG9uZ2tldC5jb20iLCJpYXQiOjE3MDgzODkxNzksInN1YiI6ImNvbGxleTAzMjZAZ21haWwuY29tIiwiYXVkIjoibG9uZ2tldC5jb20iLCJleHAiOjE3MDgzOTA5NzksInJvbGUiOiJOT05FIiwiaW5mbyI6eyJwcm92aWRlciI6Imdvb2dsZSIsImVtYWlsIjoiY29sbGV5MDMyNkBnbWFpbC5jb20ifX0.PuQsqWISXnswBiDUFdJHh1ptqCsgK1YrQY3Hbdx70YU",
+    "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDg0MjUxNzl9.6HR5ZhL1RoJ9oyxGKzkZRWXYLKtk8f4bDe2vF_uhBUg",
+    "joined": false
+  },
+  "message": "성공",
+  "status": "SUCCESS"
+}

@@ -1,0 +1,22 @@
+{
+    "list":[
+        {
+            "id" : "1",
+            "name" : "Taichi",
+            "cate" : [39,42],
+            "price": "215000",
+            "sale" : true,
+            "img"  : "https://akaboardshop.com/web/upload/NNEditor/20210419/432e98210b8a3f86e62065de70b1bce8.jpg",
+            "brand": "travelol"
+        },
+        {
+            "id" : "2",
+            "name" : "상품2번",
+            "cate" : [44,45,48],
+            "price": "2300000",
+            "sale" : true,
+            "img"  : "https://akaboardshop.com/web/upload/NNEditor/20230328/9c9e5ada43b23b9c0ff15e885f62f056.jpg",
+            "brand": ""
+        }
+    ]
+}

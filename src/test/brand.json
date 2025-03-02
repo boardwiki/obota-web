@@ -1,0 +1,40 @@
+{
+    "list":[
+        {
+            "id":"1",
+            "name":"니산",
+            "name_en" : "nishan",
+            "img"     : "/"
+        },
+        {
+            "id":"2",
+            "name" : "로디드",
+            "name_en":"loaded",
+            "img"     : "/"
+        },
+        {
+            "id":"3",
+            "name" :"미야오",
+            "name_en" : "meow",
+            "img"     : "/"
+        },
+        {
+            "id":"4",
+            "name" :"바슬",
+            "name_en" : "basali",
+            "img"     : "/"
+        },
+        {
+            "id":"5",
+            "name" :"시리즈",
+            "name_en" : "series",
+            "img"     : "/"
+        },
+        {
+            "id":"6",
+            "name" :"심플",
+            "name_en" : "simple",
+            "img"     : "/"
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+/* color palette from <https://github.com/vuejs/theme> */
+
+/*@import url('https://rsms.me/inter/inter.css');
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family:'DNFBitBitv2';
+  font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
+}
+
+@font-face {
+  font-family: 'TheJamsil5Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+:root {
+
+  --c-theme-red           :#EA4335;
+  --c-theme-shape         :#FFCC16;
+  --c-theme-blue          :#4285F4;
+  --c-theme-green         :#0A9C56;
+
+  --c-theme-red-light     :#F99487;
+  --c-theme-shape-light   :#FFDE6C;
+  --c-theme-blue-light    :#32A7FF;
+  --c-theme-green-light   :#18CE77;
+
+  --c-theme-red-lighter   :#FFDEDC;
+  --c-theme-shape-lighter :#FFF8B7;
+  --c-theme-blue-lighter  :#E2F3FF;
+  --c-theme-green-lighter :#D1F9DC;
+
+
+  --c-theme-contrast0     :#FFF;
+  --c-theme-contrast1     :#F5F5F5;
+  --c-theme-contrast2     :#DCDCDC;
+  --c-theme-contrast3     :#8D8D8E; 
+  --c-theme-contrast4     :#59595B;
+  --c-theme-contrast5     :#292929;
+
+  --f-theme-nano          :10px;
+  --f-theme-tiny          :12px;
+  --f-theme-small         :14px;
+  --f-theme-regular       :16px;
+  --f-theme-large         :18px;
+  --f-theme-title3        :20px;
+  --f-theme-title2        :24px;
+  --f-theme-title1        :32px;
+
+  --s-theme-input         :48px;
+  --s-theme-btn           :36px;
+  --s-theme-radius        :10px;
+
+  --device-max-width      :480px;
+
+
+  
+  /* app var */
+  --content-padding : 0 20px;
+
+}
+
+
+/* semantic color variables for this project */
+:root {
+
+  --c-lnk-white   : var(--c-theme-contrast0);
+  --c-lnk-base    : var(--c-theme-contrast1);
+  --c-lnk-light   : var(--c-theme-contrast2);
+  --c-lnk-basic   : var(--c-theme-contrast3);
+  --c-lnk-dark    : var(--c-theme-contrast4);
+  --c-lnk-black   : var(--c-theme-contrast5);
+
+  --c-font        : var(--c-theme-contrast5);  
+  --c-h-font      : var(--c-theme-contrast5);
+  --c-h-border    : var(--c-theme-contrast7);
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background : var(--c-theme-contrast7);
+    --font-c-1   : var(--c-theme-contrast1);  
+  }
+}
+*/
