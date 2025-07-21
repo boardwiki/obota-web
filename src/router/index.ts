@@ -32,6 +32,11 @@ const router = createRouter({
           name: 'marketing',
           component: () => import('@/views/term/marketing.vue')
         },
+        {
+          path: '/accountdeletion',
+          name: 'accountdeletion',
+          component: () => import('@/views/term/accountdeletion.vue')
+        },
       ]
     },
     {
