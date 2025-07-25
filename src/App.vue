@@ -4,7 +4,7 @@ import Boot from './components/common/Boot.vue';
 import router from './router'
 //import { useAuthStore } from './stores/auth';  
 //import { useProfileStore} from './stores/profile'; 
-import { onMounted,computed,ref } from 'vue'; //watch,
+import { onMounted,ref } from 'vue'; //watch,
 
 //const authStore = useAuthStore();
 //const profileStore = useProfileStore();
