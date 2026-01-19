@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  window.location.href = 'https://boardwiki.kr'
-})
+window.location.replace("https://boardwiki.kr");
 </script>
 
-<template></template>
+<template>
+  <div></div>
+</template>
