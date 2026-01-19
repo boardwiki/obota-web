@@ -1,23 +1,17 @@
-// src/router/index.ts
-import {createRouter, createWebHistory} from "vue-router"
+import { createRouter, createWebHistory } from "vue-router"
 
-
-
-// ---------------------
 // Router 생성
-// ---------------------
 const router = createRouter({
-  history: createWebHistory('/'),
+  history: createWebHistory(), // ✅ '/' 제거
   linkActiveClass: "active",
   routes: [
-    // ------------------ Public Layout ------------------
     {
       path: "/",
       name: "home",
-      component: import("@/views/HomeView.vue"),
+      component: () => import("@/views/HomeView.vue"), // ✅ FIX
     },
-    
-   {
+
+    {
       path: "/term",
       redirect: "/term/service",
       children: [
@@ -47,15 +41,12 @@ const router = createRouter({
     {
       path: "/404",
       name: "Error404",
-      component: import("@/views/HomeView.vue"),
+      component: () => import("@/views/HomeView.vue"), // ✅ FIX
     },
 
     // Not found
-    {path: "/:pathMatch(.*)*", redirect: "/404"},
+    { path: "/:pathMatch(.*)*", redirect: "/404" },
   ],
-})
-
-router.beforeEach(async (to) => {
 })
 
 export default router

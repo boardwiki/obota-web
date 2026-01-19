@@ -1,13 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  console.log('checked')
+  window.location.href = 'https://boardwiki.kr'
 })
 </script>
 
 <template>
   <div>
-    obota Home
+    Obota
   </div>
 </template>
