@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 전체 전역 스타일 reset + Tailwind 호환 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family:
+    "Pretendard Variable",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  touch-action: manipulation;
+}
+
+/* 테마(라이트/다크) 자동 적용 + 전환 애니메이션 */
+html {
+  color-scheme: light dark;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/* 기본 글자 크기 — Tailwind 조정 기반 */
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--c-font1, #111); /* 폰트 색상 다크모드에서 Tailwind가 override */
+}

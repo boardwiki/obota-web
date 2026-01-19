@@ -1,0 +1,286 @@
+@layer components {
+  /* ===== body lock ===== */
+  body.modal-open {
+    @apply overflow-hidden;
+  }
+  /* ===== stack ===== */
+  .modal-stack {
+    @apply fixed inset-0 z-[9999];
+  }
+
+  /* ===== wrapper(dim) ===== */
+  .modal-wrapper {
+    @apply fixed inset-0 flex items-end justify-center bg-black/40 backdrop-blur-[2px];
+  }
+  .dark .modal-wrapper {
+    @apply bg-black/70;
+  }
+
+  /* ===== popup container ===== */
+  .modal-wrapper .modal-popup {
+    @apply w-full h-full max-w-[1024px] mx-auto flex items-center justify-center;
+  }
+
+  /* ===== inner(card) ===== */
+  .modal-wrapper .modal-popup .modal-inner {
+    @apply w-[min(640px,92vw)] max-h-[90vh] bg-white rounded-[20px] overflow-hidden flex flex-col;
+  }
+  .dark .modal-wrapper .modal-popup .modal-inner {
+    @apply bg-slate-900 text-slate-100 ring-1 ring-white/10;
+  }
+
+  /* 기존 !important 유지 (Tailwind만으로 완전 동일하게 강제하기 애매해서) */
+  .modal-wrapper .modal-popup .modal-inner.w-50 {
+    width: 380px !important;
+  }
+
+  /* ===== header ===== */
+  .modal-wrapper .modal-popup .modal-inner .modal-header {
+    @apply text-center flex items-center justify-center min-h-[50px] relative;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-header span {
+    @apply text-[18px] font-bold;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-header button {
+    @apply w-[50px] h-[50px] absolute top-0 flex items-center justify-center;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-header button.modal_close {
+    @apply right-0;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-header button.modal_back {
+    @apply left-[7px] cursor-pointer;
+  }
+
+  /* ===== body ===== */
+  .modal-wrapper .modal-popup .modal-inner .modal-body {
+    @apply w-full overflow-y-auto;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body > p {
+    @apply font-bold text-[14px] leading-6 whitespace-pre-line text-center py-[10px];
+  }
+
+  .modal-wrapper .modal-popup .modal-inner .modal-body .txt_rule {
+    @apply text-[15px] leading-6;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .txt_rule .title {
+    @apply text-[16px] font-medium;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .txt_rule .cont_box {
+    @apply mt-4;
+  }
+
+  /* ===== list (counter는 CSS 필요) ===== */
+  .modal-wrapper .modal-popup .modal-inner .modal-body .cont_list.list_num > li {
+    @apply mb-[10px];
+    counter-increment: list-number;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .cont_list.list_num > li::before {
+    content: counter(list-number);
+    @apply inline-flex items-center justify-center
+           text-[10px] font-semibold leading-[14px]
+           w-[14px] h-[14px] rounded-full
+           text-slate-900 bg-white border border-slate-900
+           mr-[6px];
+  }
+  .dark .modal-wrapper .modal-popup .modal-inner .modal-body .cont_list.list_num > li::before {
+    @apply text-slate-200 bg-slate-900 border-slate-200;
+  }
+
+  .modal-wrapper .modal-popup .modal-inner .modal-body .cont_list_child {
+    @apply pt-[10px];
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .cont_list_child > li {
+    @apply pl-[14px] relative;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .cont_list_child > li::before {
+    content: "";
+    @apply absolute left-0 top-[8px] w-1 h-1 rounded-full bg-slate-900;
+  }
+  .dark .modal-wrapper .modal-popup .modal-inner .modal-body .cont_list_child > li::before {
+    @apply bg-slate-200;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .cont_list_child.num > li::before {
+    display: none;
+  }
+
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_title {
+    @apply mb-2;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_txt {
+    @apply mb-[14px];
+  }
+
+  /* ===== table ===== */
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table {
+    @apply w-full;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table tr,
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table th,
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table td {
+    @apply border border-slate-900;
+  }
+  .dark .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table tr,
+  .dark .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table th,
+  .dark .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table td {
+    @apply border-slate-600;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table th {
+    @apply p-[14px];
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table.col th {
+    @apply text-left;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table td {
+    @apply p-[10px_14px];
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table td p {
+    @apply leading-6 mb-1;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-body .sub_table td p:last-child {
+    @apply mb-0;
+  }
+
+  /* ===== footer ===== */
+  .modal-wrapper .modal-popup .modal-inner .modal-footer {
+    @apply w-full p-0 mt-5;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-footer .btn_area {
+    @apply flex items-center gap-5;
+  }
+
+  .modal-wrapper .modal-popup .modal-inner .modal-footer .btn_area .btn_popup {
+    @apply w-full flex justify-center mx-auto
+           bg-blue-600 text-white text-[16px] font-medium
+           py-[14px] rounded-lg;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-footer .btn_area .btn_popup:disabled {
+    @apply bg-slate-100 text-slate-400;
+  }
+  .dark .modal-wrapper .modal-popup .modal-inner .modal-footer .btn_area .btn_popup:disabled {
+    @apply bg-slate-700 text-slate-400;
+  }
+
+  .modal-wrapper .modal-popup .modal-inner .modal-footer .btn_area .btn_cancle {
+    @apply w-full flex justify-center mx-auto
+           text-[16px] font-medium py-[14px] rounded-lg
+           text-slate-700 outline outline-1 outline-slate-300;
+  }
+  .modal-wrapper .modal-popup .modal-inner .modal-footer .btn_area .btn_cancle span {
+    @apply text-slate-700;
+  }
+  .dark .modal-wrapper .modal-popup .modal-inner .modal-footer .btn_area .btn_cancle,
+  .dark .modal-wrapper .modal-popup .modal-inner .modal-footer .btn_area .btn_cancle span {
+    @apply text-slate-200 outline-slate-600;
+  }
+
+  .modal-wrapper .modal-popup .modal-inner .modal-footer .btn_area.btn_no_round .base-button {
+    @apply !rounded-none;
+  }
+
+  /* ===== variants ===== */
+  .modal-wrapper .modal-popup .modal-inner__alert {
+    @apply min-w-[312px] max-w-[360px];
+  }
+  .modal-wrapper .modal-popup .modal-inner__alert .modal-footer .btn_area {
+    @apply w-[calc(100%+4px)] ml-[-2px] mb-[-1px] gap-0;
+  }
+  .modal-wrapper .modal-popup .modal-inner__alert .modal-footer .btn_area button {
+    @apply h-[51px];
+  }
+
+  .modal-wrapper .modal-popup .modal-inner__full {
+    @apply w-full max-w-full h-full max-h-full rounded-none;
+  }
+  .modal-wrapper .modal-popup .modal-inner__full .modal-footer {
+    @apply fixed left-0 bottom-0;
+  }
+  .modal-wrapper .modal-popup .modal-inner__full .modal-footer .btn_area {
+    @apply px-6 pb-[34px];
+  }
+
+  .modal-wrapper .modal-popup .modal-inner__bottom {
+    @apply fixed bottom-0 opacity-100 justify-center
+           w-full max-w-full max-h-[558px]
+           rounded-t-[20px];
+  }
+  .modal-wrapper .modal-popup .modal-inner__bottom .modal-header {
+    @apply h-[32px] mt-5;
+  }
+  .modal-wrapper .modal-popup .modal-inner__bottom .modal-header > span {
+    @apply leading-[30px];
+  }
+  .modal-wrapper .modal-popup .modal-inner__bottom .modal-header .modal_close {
+    @apply w-[32px] h-[32px] top-1/2 -translate-y-1/2 right-4;
+  }
+  .modal-wrapper .modal-popup .modal-inner__bottom .modal-body {
+    @apply relative z-[9];
+  }
+  .modal-wrapper .modal-popup .modal-inner__bottom .modal-footer {
+    @apply w-full mt-0 p-6 bg-white;
+  }
+  .dark .modal-wrapper .modal-popup .modal-inner__bottom .modal-footer {
+    @apply bg-slate-900;
+  }
+
+  /* ===== 기존 :has() 유지 ===== */
+  .modal-wrapper .modal-popup--alert:has(.modal-footer) .modal-body {
+    padding-bottom: 0;
+  }
+  .modal-wrapper .modal-popup:has(.modal-body_text) .modal-body {
+    padding-bottom: 0;
+  }
+
+  /* ===== transition-group ===== */
+  .modal-wrapper-enter-active,
+  .modal-wrapper-leave-active {
+    @apply transition-opacity duration-300 ease-out;
+  }
+  .modal-wrapper-enter-from,
+  .modal-wrapper-leave-to {
+    @apply opacity-0;
+  }
+  .modal-wrapper-enter-to,
+  .modal-wrapper-leave-from {
+    @apply opacity-100;
+  }
+
+  .modal-wrapper:has(.modal-popup--full) {
+    transition: none !important;
+    opacity: 1 !important;
+  }
+
+  .modal-popup {
+    @apply transition-[transform,opacity] duration-300 ease-out;
+  }
+
+  /* bottom 모달 슬라이드 */
+  .modal-popup--bottom {
+    will-change: transform;
+    @apply transition-transform duration-500 ease-in-out;
+  }
+  .modal-wrapper-enter-from .modal-popup--bottom {
+    transform: translateY(100%);
+  }
+  .modal-wrapper-leave-to .modal-popup--bottom {
+    transform: translateY(100%);
+  }
+  .modal-wrapper-leave-active .modal-popup--bottom {
+    transition-duration: 800ms;
+  }
+
+  /* alert 모달 scale */
+  .modal-wrapper-enter-from .modal-popup--alert {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  .modal-wrapper-leave-to .modal-popup--alert {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+
+  .modal-popup--full {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

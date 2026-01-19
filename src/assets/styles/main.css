@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("../font/PretendardVariable.woff2") format("woff2-variations");
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Pretendard Variable", "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+@import "./reset.css";
+@import "./base.css";
+@import "./modal.css";
+
+.sound_only {
+  display: inline-block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0;
+  line-height: 0;
+  border: 0 !important;
+  overflow: hidden !important;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+.input {
+  @apply w-full px-3 py-2 rounded-md border
+         bg-white text-neutral-800
+         dark:bg-neutral-800 dark:text-neutral-100 dark:border-neutral-600;
+}
+
+.input:focus {
+  @apply outline-none ring-2 ring-neutral-400 dark:ring-neutral-500;
+}
+
+@layer components {
+  .modal-body_text {
+    @apply text-center flex flex-col gap-[10px];
+  }
+  .modal-body_text > dt {
+    @apply font-bold text-[14px] text-slate-900 dark:text-slate-100;
+  }
+  .modal-body_text > dd {
+    @apply px-5 font-normal text-[13px] whitespace-pre-line text-slate-600 dark:text-slate-300;
+  }
+}

@@ -1,0 +1,128 @@
+:root {
+  /* Primary color palette */
+  --c-red: #ea4335;
+  --c-yellow: #ffcc16;
+  --c-blue: #4285f4;
+  --c-green: #0a9c56;
+
+  /* Light versions */
+  --c-red-light: #f99487;
+  --c-yellow-light: #ffde6c;
+  --c-blue-light: #32a7ff;
+  --c-green-light: #18ce77;
+
+  /* Lighter versions */
+  --c-red-lighter: #ffdedc;
+  --c-yellow-lighter: #fff8b7;
+  --c-blue-lighter: #e2f3ff;
+  --c-green-lighter: #d1f9dc;
+
+  /* grayscale */
+  --g-0: #ffffff;
+  --g-1: #f5f5f5;
+  --g-2: #dcdcdc;
+  --g-3: #8d8d8e;
+  --g-4: #59595b;
+  --g-5: #292929;
+  --g-6: #1a1a1a;
+}
+
+:root {
+  /* App background */
+  --app-bg: light-dark(var(--g-0), var(--g-6));
+
+  /* Main Text */
+  --app-text: light-dark(var(--g-5), var(--g-1));
+
+  /* Sub Text */
+  --app-text-muted: light-dark(var(--g-3), var(--g-2));
+
+  /* Surface / Card */
+  --app-surface: light-dark(var(--g-1), #111111);
+
+  /* Border */
+  --app-border: light-dark(var(--g-2), var(--g-4));
+
+  /* Header Background */
+  --app-header-bg: light-dark(var(--g-0), #1f1f1f);
+
+  /* Header Text */
+  --app-header-text: light-dark(var(--g-5), var(--g-1));
+
+  /* Input */
+  --app-input-bg: light-dark(var(--g-1), #111);
+  --app-input-text: light-dark(var(--g-5), var(--g-1));
+
+  /* Buttons */
+  --btn-bg: light-dark(var(--g-2), var(--g-4));
+  --btn-text: light-dark(var(--g-5), var(--g-1));
+
+  /* Toggle Switch */
+  --toggle-bg: light-dark(#d4d4d4, #444);
+  --toggle-thumb: light-dark(#fff, #111);
+
+  /* Emojis */
+  --emoji-sun: light-dark(#ffcc00, #666);
+  --emoji-moon: light-dark(#666, #fff);
+}
+
+:root {
+  /* disabled */
+  --btn-disabled-bg: #eff4fb;
+  --btn-disabled-text: #adb3d2;
+
+  /* default */
+  --btn-default-bg: #ffffff;
+  --btn-default-text: #000000;
+  --btn-default-border: #222222;
+
+  /* primary */
+  --btn-primary-bg: #f66119;
+  --btn-primary-text: #ffffff;
+
+  /* cancel */
+  --btn-cancel-bg: #f4f4f4;
+  --btn-cancel-text: #666666;
+
+  /* danger */
+  --btn-danger-bg: #ff1717;
+  --btn-danger-text: #ffffff;
+
+  /* text */
+  --btn-text-color: #3b4659;
+
+  /* gray */
+  --btn-gray-bg: #eff4fb;
+
+  /* underline */
+  --btn-underline-text: #67748e;
+}
+
+.dark {
+  --btn-disabled-bg: #1f2937;
+  --btn-disabled-text: #6b7280;
+
+  --btn-default-bg: #f66119;
+  --btn-default-text: #ffffff;
+  --btn-default-border: #f66119;
+
+  --btn-primary-bg: #f66119;
+  --btn-primary-text: #ffffff;
+
+  --btn-cancel-bg: #1f2933;
+  --btn-cancel-text: #cbd5e1;
+
+  --btn-danger-bg: #ef4444;
+  --btn-danger-text: #ffffff;
+
+  --btn-text-color: #cbd5e1;
+  --btn-gray-bg: #1e293b;
+  --btn-underline-text: #94a3b8;
+}
+
+button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+  cursor: pointer;
+}

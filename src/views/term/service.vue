@@ -1,77 +1,278 @@
-<script lang="ts" setup>
-</script>
-
 <template>
-    <div class="term">
-    <h2>오보타 서비스 이용약관</h2>
-
-    <h3>제 1 조 (목적)</h3>
-    <p>본 약관은 보드위키(이하 "회사")가 제공하는 오보타(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.</p>
-
-    <h3>제 2 조 (용어의 정의)</h3>
-    <p><strong>"서비스"</strong>란 이용자가 보드 활동 관련 정보를 등록하고 공유할 수 있는 기능을 포함한 오보타 앱을 의미합니다.</p>
-    <p><strong>"이용자"</strong>란 본 약관에 동의하고 서비스를 이용하는 자를 의미합니다.</p>
-    <p><strong>"콘텐츠"</strong>란 이용자가 등록하는 장소 정보, 참여 여부 등의 정보를 포함한 모든 데이터를 의미합니다.</p>
-
-    <h3>제 3 조 (계정 및 가입)</h3>
-    <p>이용자는 정확한 정보를 제공하여 계정을 생성해야 하며, 허위 정보로 가입한 경우 서비스 이용이 제한될 수 있습니다.</p>
-    <p>소셜 로그인을 이용하여 가입한 경우, 해당 플랫폼의 정책을 따릅니다.</p>
-    <p>이용자는 본인의 계정 정보를 보호할 책임이 있으며, 계정 도용으로 발생한 피해에 대해 회사는 책임을 지지 않습니다.</p>
-
-    <h3>제 4 조 (서비스 이용 및 데이터 활용 동의)</h3>
-    <p>이용자가 서비스에 등록한 정보(예: 장소, 참여 여부 등)는 다른 이용자가 확인할 수 있으며, 정보 공개 범위는 이용자의 책임 하에 결정됩니다.</p>
-    <p>서비스 이용 중 발생하는 문제(정보 공유로 인한 분쟁 등)에 대한 책임은 전적으로 이용자 본인에게 있으며, 회사는 이에 대한 책임을 지지 않습니다.</p>
-    <p>이용자가 서비스에 제공한 데이터(보드 활동 정보 등)는 보드위키의 활동 및 서비스 운영을 위해 활용될 수 있습니다.</p>
-    <p>회사는 서비스 개선 및 연구 목적으로 데이터를 분석할 수 있으며, 법령이 허용하는 범위 내에서 이를 활용할 수 있습니다.</p>
-
-    <h3>제 5 조 (서비스 제공 및 변경)</h3>
-    <p>회사는 이용자에게 다양한 서비스를 제공하며, 필요에 따라 서비스의 일부 또는 전체를 변경할 수 있습니다.</p>
-    <p>서비스 변경이 있을 경우 사전 공지를 원칙으로 하되, 긴급한 경우 사후 공지가 이루어질 수 있습니다.</p>
-    <p>회사는 서비스 유지 및 운영을 위해 이용자의 데이터를 분석하고 최적화할 수 있습니다.</p>
-
-    <h3>제 6 조 (이용 제한 및 해지)</h3>
-    <p>이용자가 본 약관을 위반할 경우, 회사는 사전 통지 없이 이용자의 서비스 이용을 제한하거나 계정을 삭제할 수 있습니다.</p>
-    <p>이용자가 서비스 탈퇴를 요청할 경우, 탈퇴 처리가 완료되면 관련 데이터는 본 약관의 개인정보 보호 정책에 따라 보관 및 삭제됩니다.</p>
-
-    <h3>제 7 조 (광고 및 제3자 서비스 연동)</h3>
-    <p>회사는 서비스 내에서 광고를 게재할 수 있으며, 이용자는 이를 원하지 않을 경우 광고 차단 기능을 활용할 수 있습니다.</p>
-    <p>서비스는 외부 플랫폼(소셜 로그인, 결제 등)과 연동될 수 있으며, 해당 서비스의 이용약관을 따릅니다.</p>
-
-    <h3>제 8 조 (책임의 한계)</h3>
-    <p>회사는 천재지변, 시스템 장애 등의 불가항력적인 사유로 인한 서비스 중단에 대해 책임을 지지 않습니다.</p>
-    <p>회사는 이용자가 등록한 정보의 정확성, 신뢰성에 대해 보증하지 않으며, 발생하는 문제에 대해 책임을 지지 않습니다.</p>
-    <p>이용자는 서비스 이용 시 타인의 권리를 침해하거나 불법적인 행위를 해서는 안 됩니다.</p>
-
-    <h3>제 9 조 (분쟁 해결 및 관할 법원)</h3>
-    <p>본 약관에서 규정하지 않은 사항은 대한민국 관련 법령 및 일반적인 상관례를 따릅니다.</p>
-    <p>서비스 이용과 관련하여 분쟁이 발생할 경우 대한민국 법률을 따르며, 서울중앙지방법원을 관할 법원으로 합니다.</p>
-
+  <div class="mx-auto max-w-4xl px-4 py-10 text-neutral-800">
+    <!-- Language Switch -->
+    <div class="mb-8 flex flex-wrap justify-end gap-2">
+      <button
+        v-for="l in locales"
+        :key="l"
+        @click="locale = l"
+        class="rounded-md border border-neutral-300 px-3 py-1 text-sm font-medium transition
+               hover:bg-neutral-100
+               data-[active=true]:border-neutral-900
+               data-[active=true]:bg-neutral-900
+               data-[active=true]:text-white"
+        :data-active="locale === l"
+      >
+        {{ labels[l] }}
+      </button>
     </div>
+
+    <article class="space-y-8">
+      <h2 class="text-2xl font-bold tracking-tight">
+        {{ t.title }}
+      </h2>
+
+      <section
+        v-for="(item, index) in t.sections"
+        :key="index"
+        class="space-y-2"
+      >
+        <h3 class="text-lg font-semibold text-neutral-900">
+          {{ item.heading }}
+        </h3>
+        <p class="whitespace-pre-line leading-relaxed text-neutral-700">
+          {{ item.content }}
+        </p>
+      </section>
+    </article>
+  </div>
 </template>
 
+<script setup>
+import { computed, ref } from 'vue'
 
+const locale = ref('ko')
+const locales = ['ko', 'ja', 'zh-cn', 'zh-tw', 'en']
 
-<style lang="scss" scoped>
-    .term{
-        word-wrap: break-word;
-        padding: 40px 20px;
+const labels = {
+  ko: '한국어',
+  ja: '日本語',
+  'zh-cn': '简体中文',
+  'zh-tw': '繁體中文',
+  en: 'English',
+}
 
-        > *{
-            line-height: 1.6;
-        }
+const messages = {
+  /* =========================
+     한국어
+  ========================= */
+  ko: {
+    title: '오보타 서비스 이용약관',
+    sections: [
+      {
+        heading: '제1조 (목적)',
+        content:
+          '본 약관은 보드위키(이하 “회사”)가 제공하는 오보타(Obota) 앱 및 보드위키 웹 서비스(이하 “서비스”)의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.',
+      },
+      {
+        heading: '제2조 (서비스 내용)',
+        content:
+          '서비스는 보드 활동과 관련된 위치 정보, 활동 기록, 참여 정보 등을 등록·공유할 수 있는 기능을 제공합니다.',
+      },
+      {
+        heading: '제3조 (계정 및 이용)',
+        content:
+          '이용자는 소셜 로그인을 통해 계정을 생성할 수 있으며, 정확한 정보를 제공해야 합니다.\n허위 정보로 인한 불이익에 대해 회사는 책임을 지지 않습니다.',
+      },
+      {
+        heading: '제4조 (데이터 활용)',
+        content:
+          '이용자가 서비스에 등록한 활동 정보는 서비스 운영, 개선 및 보드 문화 활동 분석을 위해 활용될 수 있습니다.',
+      },
+      {
+        heading: '제5조 (서비스 변경 및 중단)',
+        content:
+          '회사는 서비스 개선을 위해 일부 또는 전체 서비스를 변경하거나 중단할 수 있습니다.',
+      },
+      {
+        heading: '제6조 (책임의 한계)',
+        content:
+          '본 서비스는 무료로 제공되며, 서비스 이용과 관련하여 발생한 손해에 대해 회사는 법령이 허용하는 범위 내에서 책임을 지지 않습니다.',
+      },
+      {
+        heading: '제7조 (관할 법원)',
+        content:
+          '본 약관과 관련한 분쟁은 대한민국 법률을 따르며, 관할 법원은 서울중앙지방법원으로 합니다.',
+      },
+    ],
+  },
 
-        p{
-            font-size:1.2rem;
-        }
+  /* =========================
+     일본어
+  ========================= */
+  ja: {
+    title: 'Obota サービス利用規約',
+    sections: [
+      {
+        heading: '第1条（目的）',
+        content:
+          '本規約は、BoardWiki（以下「会社」）が提供する Obota アプリおよび Web サービスの利用に関し、会社と利用者の権利・義務および責任事項を定めることを目的とします。',
+      },
+      {
+        heading: '第2条（サービス内容）',
+        content:
+          '本サービスは、ボード活動に関連する位置情報、活動履歴、参加情報などを登録・共有する機能を提供します。',
+      },
+      {
+        heading: '第3条（アカウントおよび利用）',
+        content:
+          '利用者はソーシャルログインを通じてアカウントを作成でき、正確な情報を提供するものとします。\n虚偽情報による不利益について、会社は責任を負いません。',
+      },
+      {
+        heading: '第4条（データの利用）',
+        content:
+          '利用者が登録した活動情報は、サービス運営、改善およびボード文化活動の分析のために利用されることがあります。',
+      },
+      {
+        heading: '第5条（サービスの変更および中断）',
+        content:
+          '会社は、サービス向上のため、サービスの全部または一部を変更または中断することがあります。',
+      },
+      {
+        heading: '第6条（責任の制限）',
+        content:
+          '本サービスは無料で提供されており、法令で認められる範囲内で、会社は損害について責任を負いません。',
+      },
+      {
+        heading: '第7条（管轄裁判所）',
+        content:
+          '本規約に関する紛争は大韓民国の法律に従い、ソウル中央地方裁判所を専属的合意管轄とします。',
+      },
+    ],
+  },
 
-        h2{
-            font-size:2rem;
-            padding:20px 0; 
-        }
+  /* =========================
+     중국어 간체
+  ========================= */
+  'zh-cn': {
+    title: 'Obota 服务使用条款',
+    sections: [
+      {
+        heading: '第一条（目的）',
+        content:
+          '本条款旨在规定 BoardWiki（以下简称“公司”）所提供的 Obota 应用及网页服务的使用相关权利、义务及责任。',
+      },
+      {
+        heading: '第二条（服务内容）',
+        content:
+          '本服务提供与板类活动相关的位置、活动记录及参与信息的登记与分享功能。',
+      },
+      {
+        heading: '第三条（账户与使用）',
+        content:
+          '用户可通过社交账号登录创建账户，并须提供真实、准确的信息。\n因虚假信息造成的损失，公司不承担责任。',
+      },
+      {
+        heading: '第四条（数据使用）',
+        content:
+          '用户在服务中登记的活动信息可能用于服务运营、改进及板类文化活动分析。',
+      },
+      {
+        heading: '第五条（服务变更与中断）',
+        content:
+          '公司可因服务改进需要，对全部或部分服务进行变更或中断。',
+      },
+      {
+        heading: '第六条（责任限制）',
+        content:
+          '本服务为免费提供，对于服务使用过程中产生的损失，公司在法律允许范围内不承担责任。',
+      },
+      {
+        heading: '第七条（管辖法院）',
+        content:
+          '因本条款产生的争议，适用大韩民国法律，并由首尔中央地方法院管辖。',
+      },
+    ],
+  },
 
-         h3{
-            font-size:1.6rem;
-            padding:20px 0; 
-        }
-    }
-</style>
+  /* =========================
+     중국어 번체
+  ========================= */
+  'zh-tw': {
+    title: 'Obota 服務使用條款',
+    sections: [
+      {
+        heading: '第一條（目的）',
+        content:
+          '本條款旨在規範 BoardWiki（以下稱「公司」）所提供之 Obota 應用程式與網站服務的使用相關權利、義務與責任。',
+      },
+      {
+        heading: '第二條（服務內容）',
+        content:
+          '本服務提供與板類活動相關之位置資訊、活動紀錄與參與資訊的登錄與分享功能。',
+      },
+      {
+        heading: '第三條（帳戶與使用）',
+        content:
+          '使用者可透過社群登入建立帳戶，並須提供正確資訊。\n因不實資訊所造成的損害，公司不負責任。',
+      },
+      {
+        heading: '第四條（資料使用）',
+        content:
+          '使用者於服務中登錄之活動資訊，可能用於服務營運、改善及板類文化活動分析。',
+      },
+      {
+        heading: '第五條（服務變更與中斷）',
+        content:
+          '公司得基於服務改善需要，變更或中斷全部或部分服務。',
+      },
+      {
+        heading: '第六條（責任限制）',
+        content:
+          '本服務為免費提供，公司僅於法律允許範圍內承擔責任。',
+      },
+      {
+        heading: '第七條（管轄法院）',
+        content:
+          '因本條款所生之爭議，適用大韓民國法律，並以首爾中央地方法院為管轄法院。',
+      },
+    ],
+  },
+
+  /* =========================
+     영어
+  ========================= */
+  en: {
+    title: 'Obota Terms of Service',
+    sections: [
+      {
+        heading: 'Article 1 (Purpose)',
+        content:
+          'These Terms define the rights, obligations, and responsibilities between BoardWiki (“Company”) and users regarding the use of the Obota application and web services.',
+      },
+      {
+        heading: 'Article 2 (Service Description)',
+        content:
+          'The Service provides features that allow users to register and share location data, activity records, and participation information related to board activities.',
+      },
+      {
+        heading: 'Article 3 (Accounts and Use)',
+        content:
+          'Users may create an account via social login and must provide accurate information.\nThe Company is not responsible for disadvantages caused by false information.',
+      },
+      {
+        heading: 'Article 4 (Use of Data)',
+        content:
+          'Activity information registered by users may be used for service operation, improvement, and analysis of board culture activities.',
+      },
+      {
+        heading: 'Article 5 (Service Changes and Suspension)',
+        content:
+          'The Company may modify or suspend all or part of the Service for improvement purposes.',
+      },
+      {
+        heading: 'Article 6 (Limitation of Liability)',
+        content:
+          'The Service is provided free of charge, and the Company shall not be liable for damages within the limits permitted by law.',
+      },
+      {
+        heading: 'Article 7 (Governing Law and Jurisdiction)',
+        content:
+          'Any disputes arising from these Terms shall be governed by the laws of the Republic of Korea, and the Seoul Central District Court shall have jurisdiction.',
+      },
+    ],
+  },
+}
+
+const t = computed(() => messages[locale.value])
+</script>

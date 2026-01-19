@@ -1,40 +1,91 @@
-<!DOCTYPE html>
-<html lang="kr">
+<!doctype html>
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <title>오보타</title>
-    
-    <meta name="theme-color" content="#ffffff">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Board obota</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="naver-site-verification" content="35ecd74604bc5ee656ad59303aa72121d1dc285a" />
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="오보타"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:image" content="https://obota.kr//assets/logo.png"/>
-    <meta property="og:url" content="https://obota.kr/"/>
-    <meta property="twitter:card" content="summary"/>
-    <meta property="twitter:title" content="오보타"/>
-    <meta property="twitter:description" content=""/>
-    <meta property="twitter:image" content="https://obota.kr//assets/logo.png"/>
-    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2500480530319727" crossorigin="anonymous"></script>-->
-    
-    <script type="module" crossorigin src="/assets/index-vqZgq25w.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B2eD8dmr.css">
+    <!--favicon-->
+    <!-- 기본 파비콘 -->
+    <link
+      rel="icon"
+      href="/favicon.ico" />
+
+    <!-- 고해상도 단일 아이콘 -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="180x180"
+      href="/icon-180.png" />
+    <link
+      rel="apple-touch-icon"
+      href="/icon-180.png" />
+
+    <!-- PWA / 안드로이드 대응 -->
+    <link
+      rel="manifest"
+      href="/manifest.json" />
+
+    <meta
+      name="theme-color"
+      content="#ffffff" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="보드위키에서 최신 스케이트, 롱보드 정보와 롱보드댄싱, 보드대회 소식을 확인하세요." />
+    <meta
+      name="keywords"
+      content="스케이트, 롱보드, 카버보드, 롱보드댄싱, 보드대회, Longboard, 롱스케이트, 롱보드행사, 보드행사, 보드위키, boardwiki, board-wiki, longskate" />
+    <meta
+      name="naver-site-verification"
+      content="e74dc3e49d0527046508b26ee9860c52a501b8f4" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:site_name"
+      content="BoardWiki" />
+    <meta
+      property="og:title"
+      content="보드위키 - 보드 커뮤니티" />
+    <meta
+      property="og:description"
+      content="보드 최신 정보를 확인하세요." />
+    <meta
+      property="og:url"
+      content="https://boardwiki.kr/" />
+    <meta
+      property="og:type"
+      content="website" />
+    <meta
+      property="og:image"
+      content="https://boardwiki.kr/images/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="보드위키 - 보드 커뮤니티" />
+    <meta
+      name="twitter:description"
+      content="보드위키에서 최신 스케이트, 롱보드 정보를 만나보세요." />
+    <meta
+      name="twitter:image"
+      content="https://boardwiki.kr/images/twitter-image.jpg" />
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://boardwiki.kr/" />
+    <script type="module" crossorigin src="/assets/index-BTJHm5bm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Ck9y2c4W.css">
   </head>
   <body>
-    <header>
-      <h1 class="sound_only">
-        <span style="font-size: 2.5rem;">오늘 보드 어디서 타?</span> <br/>함께 보드를 타보자! 오보타
-      </h1>
-    </header>
-
     <div id="app"></div>
-
-    <noscript>
-      <p>자바스크립트 기능을 껐을 경우 앱을 이용할수 없습니다. <br/> 해당 앱은 롱보드에 기술,첼린지 등을 이용 할 수 있습니다. 만든이의 국적은 대한민국입니다.</p>
-    </noscript>
-
+    <div id="dropdown-portal"></div>
   </body>
 </html>
