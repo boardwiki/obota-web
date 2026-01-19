@@ -1,7 +1,13 @@
-<script setup lang="ts">
-window.location.replace("https://boardwiki.kr");
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  console.log('checked')
+})
 </script>
 
 <template>
-  <div></div>
+  <div>
+    obota Home
+  </div>
 </template>
