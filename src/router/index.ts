@@ -13,6 +13,7 @@ const router = createRouter({
     // ------------------ Public Layout ------------------
     {
       path: "/",
+      name: "home",
       component: import("@/views/HomeView.vue"),
     },
     

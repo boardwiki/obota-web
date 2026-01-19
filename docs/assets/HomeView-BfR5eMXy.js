@@ -1,1 +1,0 @@
-import{d as o}from"./index-mbQjgW9L.js";const a=o({__name:"HomeView",setup(e){return console.log("https://boardwiki.kr"),window.location.replace("https://boardwiki.kr"),(t,r)=>null}});export{a as default};
