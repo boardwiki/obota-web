@@ -1,0 +1,1 @@
+import{d as e,o,c as t,a as n}from"./index-DzwDSCo1.js";const i=e({__name:"HomeView",setup(a){return o(()=>{window.location.href="https://boardwiki.kr"}),(r,c)=>(n(),t("div",null," Obota "))}});export{i as default};
