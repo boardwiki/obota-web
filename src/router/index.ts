@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router"
+import { createRouter, createWebHashHistory } from "vue-router"
 
 // Router 생성
 const router = createRouter({
-  history: createWebHistory(), // ✅ '/' 제거
+  history: createWebHashHistory(), // ✅ '/' 제거
   linkActiveClass: "active",
   routes: [
     {
