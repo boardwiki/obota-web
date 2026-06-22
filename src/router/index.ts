@@ -32,6 +32,7 @@ const router = createRouter({
         },
         {
           path: "accountdeletion",
+          alias: "/accountdeletion",
           name: "term-accountdeletion",
           component: () => import("@/views/term/accountdeletion.vue"),
         },
